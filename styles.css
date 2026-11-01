@@ -231,7 +231,7 @@ section{padding:clamp(3.5rem,8vh,6rem) clamp(1.2rem,4vw,3rem)}
 }
 .quote .stars{color:var(--brass);letter-spacing:.12em}
 .quote time{color:var(--ivory-faint);margin-left:auto;font-size:.85rem}
-.quote-note{max-width:1240px;margin:1.6rem auto 0;color:var(--ivory-faint);font-size:.9rem}
+.quote-note{max-width:1240px;margin:1.6rem auto 0;color:var(--ivory-dim);font-size:.9rem}
 .quote-note a{color:var(--ivory-dim)}
 @media(max-width:1000px){.quote-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.quote-grid{grid-template-columns:1fr}}
@@ -283,7 +283,7 @@ address{font-style:normal;color:var(--ivory-dim);line-height:1.7;margin-bottom:1
   position:relative;border:1px solid var(--line);border-radius:3px;overflow:hidden;
   aspect-ratio:5/4;margin:0;
 }
-.visit-map img{width:100%;height:100%;object-fit:cover;filter:saturate(.5) contrast(1.02)}
+.visit-map img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.55) contrast(1.02)}
 .map-link{
   position:absolute;right:1rem;bottom:1rem;
   background:var(--steel);color:var(--ivory);
