@@ -37,6 +37,11 @@ if(!reduced && 'IntersectionObserver' in window){
     });
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   revealables.forEach(el=>io.observe(el));
+  // Fail-safe: never leave content hidden. If reveal hasn't fired (fast scroll,
+  // programmatic capture, edge cases), fade everything in shortly after load.
+  setTimeout(()=>{
+    revealables.forEach(el=>el.classList.add('in'));
+  },1600);
 }
 
 /* Subtle hero parallax */

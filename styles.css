@@ -90,7 +90,7 @@ a{color:inherit}
   padding:clamp(4rem,9vh,7rem) clamp(1.2rem,4vw,3rem) clamp(2.6rem,6vh,4.5rem);
 }
 .hero-kicker{
-  font-size:.95rem;color:var(--ivory-dim);
+  font-size:.95rem;color:var(--ivory);opacity:.82;
   letter-spacing:.04em;margin-bottom:1rem;
 }
 .hero-title{
@@ -301,7 +301,7 @@ address{font-style:normal;color:var(--ivory-dim);line-height:1.7;margin-bottom:1
 .site-foot{
   padding:2.2rem clamp(1.2rem,4vw,3rem);
   border-top:1px solid var(--line);
-  color:var(--ivory-faint);font-size:.92rem;
+  color:var(--ivory-dim);font-size:.92rem;
   display:flex;flex-wrap:wrap;gap:.4rem 2rem;justify-content:space-between;
 }
 .site-foot strong{color:var(--ivory-dim)}
