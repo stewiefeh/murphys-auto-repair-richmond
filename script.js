@@ -27,6 +27,7 @@ function paintChips(){
 paintChips();
 
 /* Subtle hero parallax */
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const heroImg = document.querySelector('.hero-photo img');
 if(heroImg && !reduced){
   let ticking = false;
