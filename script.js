@@ -26,24 +26,6 @@ function paintChips(){
 }
 paintChips();
 
-/* Reveal on scroll */
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealables = document.querySelectorAll('.order-card,.quote,.about,.visit,.fact,.section-head,.closer h2,.closer p,.closer .btn');
-if(!reduced && 'IntersectionObserver' in window){
-  revealables.forEach(el=>el.classList.add('reveal'));
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-    });
-  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  revealables.forEach(el=>io.observe(el));
-  // Fail-safe: never leave content hidden. If reveal hasn't fired (fast scroll,
-  // programmatic capture, edge cases), fade everything in shortly after load.
-  setTimeout(()=>{
-    revealables.forEach(el=>el.classList.add('in'));
-  },1600);
-}
-
 /* Subtle hero parallax */
 const heroImg = document.querySelector('.hero-photo img');
 if(heroImg && !reduced){
