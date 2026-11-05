@@ -34,134 +34,176 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%2317181b%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%278%27 fill=%27%23d3232a%27/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0c0e'/%3E%3Crect x='7' y='13' width='18' height='6' fill='%23ff5500'/%3E%3C/svg%3E">
 <meta property="og:title" content="Murphy's Auto Repair LLC · Richmond, VA">
 <meta property="og:description" content="Chris Murphy has been turning wrenches for 25 years. Brakes, engines, classics, EVs. Open 7 AM–9 PM, seven days a week. Call (804) 239-4178.">
 <meta property="og:image" content="https://stewiefeh.github.io/murphys-auto-repair-richmond/img/mustang.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
+
+<div class="topbar" role="banner">
+  <p class="topbar-status" id="statusTag" hidden><span class="st-dot" aria-hidden="true"></span><span class="st-text">STATUS: SHOP OPEN 7 AM &ndash; 9 PM</span></p>
+  <p class="topbar-meta">5928 NINE MILE RD, STE A &middot; RICHMOND VA &middot; <a href="tel:+18042394178">(804) 239-4178</a></p>
+</div>
 
 <header class="site-head">
   <a class="brand" href="#top">
     <span class="brand-mark" aria-hidden="true"></span>
-    Murphy's <em>Auto Repair</em>
+    MURPHY&rsquo;S <span class="brand-em">AUTO REPAIR</span>
   </a>
   <nav class="site-nav" aria-label="Main">
-    <a href="#work">Work</a>
-    <a href="#proof">Reviews</a>
-    <a href="#about">The shop</a>
-    <a href="#visit">Hours &amp; directions</a>
+    <a href="#work">WORK</a>
+    <a href="#proof">REVIEWS</a>
+    <a href="#about">THE SHOP</a>
+    <a href="#visit">HOURS &amp; DIRECTIONS</a>
   </nav>
-  <a class="head-call" href="tel:+18042394178">Call (804) 239-4178</a>
+  <a class="head-call" href="tel:+18042394178">CALL (804) 239-4178</a>
 </header>
 
 <main id="top">
 
   <section class="hero">
     <figure class="hero-photo" aria-hidden="true">
-      <img src="img/mustang.jpg" alt="" loading="eager">
+      <img src="img/mustang.jpg" alt="" loading="eager" fetchpriority="high">
     </figure>
+    <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="hero-kicker">Richmond's East End · 5928 Nine Mile Rd</p>
-      <h1 class="hero-title">
-        <span class="line"><span class="word">Fixed</span> <span class="word">right</span></span>
-        <span class="line"><span class="word">the</span> <span class="word accent">first</span></span>
-        <span class="line"><span class="word">time.</span></span>
-      </h1>
-      <p class="hero-sub">Chris Murphy has been turning wrenches for 25 years, and his name is on every bolt that leaves this shop. Brakes to engine swaps, your daily driver to a Firebird on the lift.</p>
-      <div class="hero-actions">
-        <a class="btn btn-red" href="tel:+18042394178">Call (804) 239-4178</a>
-        <a class="btn btn-ghost" href="#visit">Hours &amp; directions</a>
+      <p class="hero-kicker">RICHMOND&rsquo;S EAST END &middot; EST. WORKSHOP</p>
+      <div class="hero-cols">
+        <h1 class="hero-title">
+          <span class="line"><span class="word">FIXED</span> <span class="word">RIGHT</span></span>
+          <span class="line"><span class="word">THE</span> <span class="word accent">FIRST</span></span>
+          <span class="line"><span class="word">TIME.</span></span>
+        </h1>
+        <aside class="spec-block" aria-label="Shop specifications">
+          <div class="spec-row"><span class="spec-k">FOUNDER</span><span class="spec-v">CHRIS MURPHY</span></div>
+          <div class="spec-row"><span class="spec-k">EXPERIENCE</span><span class="spec-v">25 YRS TURNING WRENCHES</span></div>
+          <div class="spec-row"><span class="spec-k">LOCATION</span><span class="spec-v">5928 NINE MILE RD, STE A</span></div>
+          <div class="spec-row"><span class="spec-k">TRANSIT</span><span class="spec-v">OFF I-64 &middot; MIN FROM RIC</span></div>
+          <div class="spec-row"><span class="spec-k">RATING</span><span class="spec-v"><a href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">4.7 / 194 REVIEWS <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></a></span></div>
+        </aside>
       </div>
-      <a class="hero-rating" href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <span><strong>4.7</strong> · 194 Google reviews</span>
-      </a>
-      <p class="open-chip" id="openChip" hidden></p>
+      <p class="hero-sub">Brakes to engine swaps, your daily driver to a Firebird on the lift. An honest diagnosis and a straight price before any wrench turns.</p>
+      <div class="hero-actions">
+        <a class="btn btn-call" href="tel:+18042394178">CALL CHRIS &middot; (804) 239-4178</a>
+        <a class="btn btn-ghost" href="#visit">HOURS &amp; DIRECTIONS</a>
+      </div>
     </div>
   </section>
 
   <section class="facts" aria-label="The shop in numbers">
-    <div class="fact"><strong>4.7★</strong><span>across 194 reviews</span></div>
-    <div class="fact"><strong>7 AM – 9 PM</strong><span>every day of the week</span></div>
-    <div class="fact"><strong>25 years</strong><span>under the hood</span></div>
-    <div class="fact"><strong>Off I-64</strong><span>minutes from the airport</span></div>
+    <div class="fact"><span class="fact-k">RATING</span><strong>4.7&#9733;</strong><span class="fact-v">across 194 reviews</span></div>
+    <div class="fact"><span class="fact-k">HOURS</span><strong>7&ndash;9</strong><span class="fact-v">AM to PM, every day</span></div>
+    <div class="fact"><span class="fact-k">EXP</span><strong>25 YRS</strong><span class="fact-v">under the hood</span></div>
+    <div class="fact"><span class="fact-k">TRANSIT</span><strong>OFF I-64</strong><span class="fact-v">minutes from the airport</span></div>
   </section>
 
   <section class="work" id="work">
     <header class="section-head">
-      <h2>The work order</h2>
-      <p>Bring it in. You'll get an honest diagnosis and a straight price before any wrench turns. Nothing more gets done than what you approved.</p>
+      <p class="sec-tag">// SECTION 01</p>
+      <h2>THE WORK ORDER</h2>
+      <p class="sec-lede">Bring it in. You'll get an honest diagnosis and a straight price before any wrench turns. Nothing more gets done than what you approved.</p>
     </header>
-    <div class="order-grid">
-      <article class="order-card">
-        <img src="img/caliper.jpg" alt="A red brake caliper clamped over a drilled and slotted rotor" loading="lazy">
-        <h3>Brakes</h3>
-        <p>Calipers, rotors, pads and lines. Stopping is not a place to bargain-hunt, so it's done once and done right.</p>
+    <div class="order-table">
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">01</div>
+        <figure class="order-photo"><img src="img/caliper.jpg" alt="A red brake caliper clamped over a drilled and slotted rotor" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 01 // BRAKES &amp; ROTORS</p>
+          <h3>Brakes</h3>
+          <p class="order-spec">CALIPERS / ROTORS / PADS / LINES</p>
+          <p class="order-desc">Stopping is not a place to bargain-hunt, so it's done once and done right.</p>
+        </div>
       </article>
-      <article class="order-card">
-        <img src="img/firebird.jpg" alt="A black Pontiac Firebird with a Ram Air hood on a yellow lift" loading="lazy">
-        <h3>Classics &amp; muscle</h3>
-        <p>Mustangs, Firebirds, hot rods and antiques. Cars with more soul than sensors get a mechanic who loves them.</p>
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">02</div>
+        <figure class="order-photo"><img src="img/firebird.jpg" alt="A black Pontiac Firebird with a Ram Air hood on a yellow lift" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 02 // CLASSICS &amp; MUSCLE</p>
+          <h3>Classics &amp; muscle</h3>
+          <p class="order-spec">MUSTANGS / FIREBIRDS / HOT RODS / ANTIQUES</p>
+          <p class="order-desc">Cars with more soul than sensors get a mechanic who loves them.</p>
+        </div>
       </article>
-      <article class="order-card">
-        <img src="img/gmc-engine.jpg" alt="An engine being lifted out of a GMC pickup truck" loading="lazy">
-        <h3>Engines</h3>
-        <p>Pulls, swaps, timing and the tired ones brought back to life. From a work truck to a V8 on the hoist.</p>
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">03</div>
+        <figure class="order-photo"><img src="img/gmc-engine.jpg" alt="An engine being lifted out of a GMC pickup truck" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 03 // ENGINES</p>
+          <h3>Engines</h3>
+          <p class="order-spec">PULLS / SWAPS / TIMING / V8 ON THE HOIST</p>
+          <p class="order-desc">The tired ones brought back to life, from a work truck to a V8 on the hoist.</p>
+        </div>
       </article>
-      <article class="order-card">
-        <img src="img/firebird-mask.jpg" alt="A matte black muscle car masked off for body work on a two-post lift" loading="lazy">
-        <h3>Steering &amp; suspension</h3>
-        <p>Shocks, front-end rebuilds and the fixes other shops botched. If a test drive finds more, you hear about it before anything happens.</p>
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">04</div>
+        <figure class="order-photo"><img src="img/firebird-mask.jpg" alt="A matte black muscle car masked off for body work on a two-post lift" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 04 // STEERING &amp; SUSPENSION</p>
+          <h3>Steering &amp; suspension</h3>
+          <p class="order-spec">SHOCKS / FRONT-END REBUILDS / TEST-DRIVE CHECKS</p>
+          <p class="order-desc">And the fixes other shops botched. If a test drive finds more, you hear about it before anything happens.</p>
+        </div>
       </article>
-      <article class="order-card">
-        <img src="img/mercedes.jpg" alt="A dark Mercedes sedan with its front bumper and grille removed for repair" loading="lazy">
-        <h3>Front-end &amp; collision work</h3>
-        <p>Bumper covers, grilles and the metal behind them, back to factory fit.</p>
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">05</div>
+        <figure class="order-photo"><img src="img/mercedes.jpg" alt="A dark Mercedes sedan with its front bumper and grille removed for repair" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 05 // FRONT-END &amp; COLLISION</p>
+          <h3>Front-end &amp; collision work</h3>
+          <p class="order-spec">BUMPER COVERS / GRILLES / METAL BEHIND THEM</p>
+          <p class="order-desc">Back to factory fit.</p>
+        </div>
       </article>
-      <article class="order-card">
-        <img src="img/mounts.jpg" alt="A worn engine mount beside a new one on a workbench" loading="lazy">
-        <h3>Daily drivers &amp; EVs</h3>
-        <p>A/C and heat, electrical diagnostics, check-engine lights, hybrids and Teslas. One Tesla owner got the lowest of five quotes here.</p>
+      <article class="order-row">
+        <div class="order-idx" aria-hidden="true">06</div>
+        <figure class="order-photo"><img src="img/mounts.jpg" alt="A worn engine mount beside a new one on a workbench" loading="lazy"></figure>
+        <div class="order-info">
+          <p class="order-meta">SERVICE 06 // DAILY DRIVERS &amp; EVS</p>
+          <h3>Daily drivers &amp; EVs</h3>
+          <p class="order-spec">A/C &amp; HEAT / ELECTRICAL / CHECK-ENGINE / HYBRIDS + TESLAS</p>
+          <p class="order-desc">One Tesla owner got the lowest of five quotes here.</p>
+        </div>
       </article>
     </div>
   </section>
 
   <section class="proof" id="proof">
     <header class="section-head">
-      <h2>What the parking lot says</h2>
-      <p>Real words from real customers on Google. Nothing here was written by a marketing department.</p>
+      <p class="sec-tag">// SECTION 02</p>
+      <h2>WHAT THE PARKING LOT SAYS</h2>
+      <p class="sec-lede">Real words from real customers on Google. Nothing here was written by a marketing department.</p>
     </header>
-    <div class="quote-grid">
-      <figure class="quote">
-        <blockquote>"Murphy was the least expensive out of 5 quotes I got for my Tesla, and he did the work in breakneck speed. I ran one errand and I got a call my car was ready for pick up."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Wesley A. Pride <time>Sept 2026</time></figcaption>
+    <div class="press-col">
+      <figure class="press">
+        <blockquote>&ldquo;<mark>Least expensive out of 5 quotes</mark> I got for my Tesla, and he did the work in breakneck speed. I ran one errand and I got a call my car was ready for pick up.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> WESLEY A. PRIDE <time>SEPT 2026</time></figcaption>
       </figure>
-      <figure class="quote">
-        <blockquote>"My truck now drives better than it ever has, because this time it was done RIGHT. I would 100% recommend him as anyone's new mechanic."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Steven Coe <time>July 2026</time></figcaption>
+      <figure class="press">
+        <blockquote>&ldquo;My truck now drives better than it ever has, because this time it was done <mark>RIGHT</mark>. I would 100% recommend him as anyone's new mechanic.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> STEVEN COE <time>JULY 2026</time></figcaption>
       </figure>
-      <figure class="quote">
-        <blockquote>"He contacted me, explained the issue clearly, and asked if I wanted it repaired. After the repairs he even recommended a tire rotation, because he genuinely cares about the long-term safety of your vehicle."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Sonya Scott <time>July 2026</time></figcaption>
+      <figure class="press">
+        <blockquote>&ldquo;He contacted me, explained the issue clearly, and asked if I wanted it repaired. After the repairs he even recommended a tire rotation, because he <mark>genuinely cares</mark> about the long-term safety of your vehicle.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> SONYA SCOTT <time>JULY 2026</time></figcaption>
       </figure>
-      <figure class="quote">
-        <blockquote>"He was up early and got my work van AC working like new! There was no way I could've made it through this hot summer without it."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Brandon M <time>June 2026</time></figcaption>
+      <figure class="press">
+        <blockquote>&ldquo;He was up early and got my work van <mark>AC working like new</mark>! There was no way I could've made it through this hot summer without it.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> BRANDON M <time>JUNE 2026</time></figcaption>
       </figure>
-      <figure class="quote">
-        <blockquote>"Kris has been working on my vehicles for years. He is hard-working and honest and his prices are more than fair."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Kelly Landry <time>Aug 2026</time></figcaption>
+      <figure class="press">
+        <blockquote>&ldquo;Kris has been working on my vehicles for years. He is hard-working and honest and his <mark>prices are more than fair</mark>.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> KELLY LANDRY <time>AUG 2026</time></figcaption>
       </figure>
-      <figure class="quote">
-        <blockquote>"We left a message and he drove to our hotel to pick up our keys. He gave us priority without an appointment, at a reasonable price. Our whole family made it home safely."</blockquote>
-        <figcaption><span class="stars sm" aria-hidden="true">★★★★★</span> Sunita Joshi <time>May 2026</time></figcaption>
+      <figure class="press">
+        <blockquote>&ldquo;We left a message and he <mark>drove to our hotel to pick up our keys</mark>. He gave us priority without an appointment, at a reasonable price. Our whole family made it home safely.&rdquo;</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> SUNITA JOSHI <time>MAY 2026</time></figcaption>
       </figure>
     </div>
-    <p class="quote-note">Quotes are lightly shortened for space. Read all 194 reviews on <a href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">Google Maps</a>.</p>
+    <p class="press-note">Quotes are lightly shortened for space. Source: <a href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">Google Maps, all 194 reviews &nearr;</a></p>
   </section>
 
   <section class="about" id="about">
@@ -169,8 +211,9 @@
       <img src="img/mustang.jpg" alt="A classic Ford Mustang convertible with its engine hanging from a chain hoist" loading="lazy">
     </div>
     <div class="about-copy">
-      <h2>The man under the car</h2>
-      <p>"Hey guys, I'm Chris, owner of Murphy's Auto Repair. My shop is right off 60, close to the airport. I've been turning wrenches for 25 years."</p>
+      <p class="sec-tag">// SECTION 03</p>
+      <h2>THE MAN UNDER THE CAR</h2>
+      <blockquote class="about-quote">&ldquo;Hey guys, I'm Chris, owner of Murphy's Auto Repair. My shop is right off 60, close to the airport. I've been turning wrenches for 25 years.&rdquo;</blockquote>
       <p>That's how Chris describes the place himself. He opened Murphy's because he watched too many people leave a car at a big shop and hope to see it again within a week. His goal, in his own words: help customers at their convenience, and make the whole thing less stressful than hauling your car across town and paying big-shop prices.</p>
       <p>Reviews keep saying the same things: he diagnoses instead of guessing, he calls before doing extra work, and the bill matches the quote. He'll work around your schedule, take a call on a weekend, and even picked a stranded family's keys up from their hotel.</p>
     </div>
@@ -178,17 +221,18 @@
 
   <section class="visit" id="visit">
     <div class="visit-info">
-      <h2>Hours &amp; directions</h2>
-      <p class="open-chip" id="openChip2" hidden></p>
+      <p class="sec-tag">// SECTION 04</p>
+      <h2>HOURS &amp; DIRECTIONS</h2>
+      <p class="open-chip" id="openChip" hidden></p>
       <table class="hours">
         <tbody>
-          <tr><th scope="row">Monday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Tuesday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Wednesday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Thursday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Friday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Saturday</th><td>7:00 AM – 9:00 PM</td></tr>
-          <tr><th scope="row">Sunday</th><td>7:00 AM – 9:00 PM</td></tr>
+          <tr><th scope="row">Monday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Friday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Saturday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
+          <tr><th scope="row">Sunday</th><td>7:00 AM &ndash; 9:00 PM</td></tr>
         </tbody>
       </table>
       <address>
@@ -197,31 +241,37 @@
         Richmond, VA 23223
       </address>
       <div class="visit-actions">
-        <a class="btn btn-red" href="tel:+18042394178">Call (804) 239-4178</a>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Murphy%27s+Auto+Repair+LLC+5928+Nine+Mile+Rd+Richmond+VA+23223" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-call" href="tel:+18042394178">CALL (804) 239-4178</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Murphy%27s+Auto+Repair+LLC+5928+Nine+Mile+Rd+Richmond+VA+23223" target="_blank" rel="noopener">GET DIRECTIONS</a>
       </div>
     </div>
     <figure class="visit-map">
       <img src="img/map.png" width="1280" height="1200" alt="" class="map-poster">
-      <iframe src="https://www.google.com/maps?q=Murphy%27s+Auto+Repair+LLC%2C+5928+Nine+Mile+Rd%2C+Richmond%2C+VA+23223&output=embed&z=15" title="Google map showing Murphy's Auto Repair LLC on Nine Mile Road, Richmond, VA" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Murphy%27s+Auto+Repair+LLC+5928+Nine+Mile+Rd+Richmond+VA+23223" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+      <iframe src="https://www.google.com/maps?q=Murphy%27s+Auto+Repair+LLC%2C+5928+Nine+Mile+Rd%2C+Richmond%2C+VA+23223&amp;output=embed&amp;z=15" title="Google map showing Murphy's Auto Repair LLC on Nine Mile Road, Richmond, VA" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Murphy%27s+Auto+Repair+LLC+5928+Nine+Mile+Rd+Richmond+VA+23223" target="_blank" rel="noopener">OPEN IN GOOGLE MAPS &nearr;</a>
     </figure>
   </section>
 
   <section class="closer">
-    <h2>Something wrong under the hood?</h2>
-    <p>Call Chris. If it can wait until morning, the shop opens at 7. If it can't, call anyway.</p>
-    <a class="btn btn-red big" href="tel:+18042394178">(804) 239-4178</a>
+    <p class="sec-tag">// WORK TAG</p>
+    <h2>SOMETHING WRONG<br>UNDER THE HOOD?</h2>
+    <p class="closer-lede">Call Chris. If it can wait until morning, the shop opens at 7. If it can't, call anyway.</p>
+    <a class="btn btn-call big" href="tel:+18042394178">(804) 239-4178</a>
   </section>
 
 </main>
 
 <footer class="site-foot">
-  <p><strong>Murphy's Auto Repair LLC.</strong> · 5928 Nine Mile Rd, Suite A, Richmond, VA 23223 · (804) 239-4178</p>
-  <p>Open 7 AM – 9 PM, seven days a week · <a href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">Read our Google reviews</a></p>
+  <p><strong>MURPHY&rsquo;S AUTO REPAIR LLC.</strong> &middot; 5928 Nine Mile Rd, Suite A, Richmond, VA 23223 &middot; (804) 239-4178</p>
+  <p>Open 7 AM &ndash; 9 PM, seven days a week &middot; <a href="https://www.google.com/maps?cid=6969340825236349377" target="_blank" rel="noopener">Read our Google reviews</a></p>
   <p class="credit">Site built by <a href="https://github.com/stewiefeh" rel="noopener">stewiefeh studio</a></p>
 </footer>
 
-<script src="script.js?v=3"></script>
+<div class="mob-bar" role="complementary" aria-label="Quick actions">
+  <a class="mob-call" href="tel:+18042394178">CALL CHRIS NOW: (804) 239-4178</a>
+  <a class="mob-nav" href="https://www.google.com/maps/dir/?api=1&amp;destination=Murphy%27s+Auto+Repair+LLC+5928+Nine+Mile+Rd+Richmond+VA+23223" target="_blank" rel="noopener">GPS</a>
+</div>
+
+<script src="script.js?v=4"></script>
 </body>
 </html>

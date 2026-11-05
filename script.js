@@ -1,33 +1,48 @@
-/* Open/closed chip, computed in shop time (America/New_York) */
+/* Open/closed status, computed in shop time (America/New_York) */
 function shopClock(){
-  // Build a "now" in the shop's zone without external APIs
   const parts = new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',hour12:false,
     year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',weekday:'short'})
     .formatToParts(new Date());
   const get = t => parts.find(p=>p.type===t)?.value;
   const hour = parseInt(get('hour'),10) % 24;
   const minute = parseInt(get('minute'),10);
-  const day = get('weekday'); // Mon Tue Wed Thu Fri Sat Sun
-  const names = {Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday',Sun:'Sunday'};
-  const open = (hour>7 || (hour===7 && minute>=0)) && hour<21;
+  const open = hour >= 7 && hour < 21;
   const chipText = open
-    ? 'Open now \u00b7 closes at 9:00 PM'
-    : (hour>=21 ? `Closed \u00b7 opens tomorrow at 7:00 AM` : `Closed \u00b7 opens at 7:00 AM`);
-  return {open,chipText,names,day,hour,minute};
+    ? 'STATUS: OPEN \u00b7 CLOSES 9:00 PM'
+    : (hour >= 21 ? 'STATUS: CLOSED \u00b7 OPENS 7:00 AM' : 'STATUS: CLOSED \u00b7 OPENS 7:00 AM');
+  const chipShort = open ? 'Open now \u00b7 closes at 9:00 PM' : 'Closed \u00b7 opens at 7:00 AM';
+  return {open,chipText,chipShort};
 }
-function paintChips(){
+function paint(){
   const st = shopClock();
+  const tag = document.getElementById('statusTag');
+  if(tag){
+    tag.hidden = false;
+    tag.querySelector('.st-text').textContent = st.chipText;
+    tag.classList.toggle('is-closed', !st.open);
+  }
   document.querySelectorAll('.open-chip').forEach(chip=>{
     chip.hidden = false;
-    chip.textContent = st.chipText;
+    chip.textContent = st.chipShort;
     chip.classList.toggle('is-open', st.open);
-    chip.classList.toggle('is-closed', !st.open);
   });
 }
-paintChips();
+paint();
+
+/* Tactile image reveal: sharp mask slide, no soft fade */
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const targets = document.querySelectorAll('.order-photo img, .about-photo img, .hero-photo img');
+if(!reduced && 'IntersectionObserver' in window){
+  targets.forEach(el=>{ if(!el.closest('.hero')) el.classList.add('rv'); });
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}
 
 /* Subtle hero parallax */
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const heroImg = document.querySelector('.hero-photo img');
 if(heroImg && !reduced){
   let ticking = false;
@@ -36,7 +51,7 @@ if(heroImg && !reduced){
     ticking = true;
     requestAnimationFrame(()=>{
       const y = Math.min(window.scrollY, window.innerHeight);
-      heroImg.style.transform = `translateY(${y*0.18}px) scale(1.06)`;
+      heroImg.style.transform = `translateY(${y*0.16}px) scale(1.06)`;
       ticking = false;
     });
   },{passive:true});
