@@ -111,7 +111,7 @@ a{color:inherit}
   -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 40%,transparent 85%);
 }
 .hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%;padding:clamp(4rem,9vh,7rem) clamp(1.2rem,4vw,3rem) clamp(2.6rem,6vh,4.2rem)}
-.hero-kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:1.2rem}
+.hero-kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-bottom:1.2rem;text-shadow:0 1px 3px rgba(0,0,0,.7)}
 .hero-cols{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(1.5rem,4vw,3rem);align-items:end}
 .hero-title{
   font-family:var(--head);font-weight:700;text-transform:uppercase;
@@ -320,15 +320,19 @@ address{font-style:normal;color:var(--alloy);line-height:1.7;margin-bottom:1.4re
   body{padding-bottom:3.6rem}
 }
 
-/* image reveal: sharp rectangular mask, no soft fade */
-.rv{clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.85,0,.15,1)}
-.rv.on{clip-path:inset(0 0 0 0)}
+/* image reveal: sharp rectangular mask, no soft fade.
+   Scroll-driven where supported; otherwise plays once on load, so images can never stay hidden. */
+.rv{clip-path:inset(0 100% 0 0);animation:reveal .55s cubic-bezier(.85,0,.15,1) both}
+@keyframes reveal{to{clip-path:inset(0 0 0 0)}}
+@supports (animation-timeline: view()){
+  .rv{animation-timeline:view();animation-range:entry 0% entry 55%}
+}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .hero-title .word{transform:none;animation:none}
   .hero-title .accent::after{transform:scaleX(1);animation:none}
-  .rv{clip-path:none;transition:none}
+  .rv{clip-path:none;animation:none}
   .btn,.head-call{transition:none}
   .hero-photo img{transform:none!important}
 }

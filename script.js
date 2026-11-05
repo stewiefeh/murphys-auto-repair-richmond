@@ -29,19 +29,7 @@ function paint(){
 }
 paint();
 
-/* Tactile image reveal: sharp mask slide, no soft fade */
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const targets = document.querySelectorAll('.order-photo img, .about-photo img, .hero-photo img');
-if(!reduced && 'IntersectionObserver' in window){
-  targets.forEach(el=>{ if(!el.closest('.hero')) el.classList.add('rv'); });
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-    });
-  },{threshold:.18});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-  setTimeout(()=>{ document.querySelectorAll('.rv').forEach(el=>el.classList.add('on')); },1400);
-}
 
 /* Subtle hero parallax */
 const heroImg = document.querySelector('.hero-photo img');
