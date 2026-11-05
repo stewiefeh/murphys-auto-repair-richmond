@@ -40,6 +40,7 @@ if(!reduced && 'IntersectionObserver' in window){
     });
   },{threshold:.18});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  setTimeout(()=>{ document.querySelectorAll('.rv').forEach(el=>el.classList.add('on')); },1400);
 }
 
 /* Subtle hero parallax */
