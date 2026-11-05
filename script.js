@@ -45,3 +45,20 @@ if(heroImg && !reduced){
     });
   },{passive:true});
 }
+
+/* Directions hand-off: iPhone/iPad open Apple Maps, Android opens its maps app
+   (geo:), desktop keeps the Google Maps web route. */
+(function(){
+  var DEST = "37.5513518,-77.3429185";
+  var NAME = encodeURIComponent("Murphy's Auto Repair LLC, 5928 Nine Mile Rd Suite A, Richmond, VA 23223");
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+              (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(navigator.userAgent);
+  document.querySelectorAll('a[href*="google.com/maps/dir"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(isIOS){ a.href = "https://maps.apple.com/?daddr=" + DEST + "&q=" + NAME + "&dirflg=d"; }
+      else if(isAndroid){ a.href = "geo:" + DEST + "?q=" + DEST + "(" + NAME + ")"; }
+      /* desktop: leave the Google Maps web link alone */
+    });
+  });
+})();
