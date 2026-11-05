@@ -72,6 +72,7 @@ a{color:inherit}
 }
 .site-nav a:hover,.site-nav a:focus-visible{color:var(--white);border-bottom-color:var(--amber)}
 .head-call{
+  white-space:nowrap;flex-shrink:0;
   font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-decoration:none;
   border:1px solid var(--line);padding:.5rem 1rem;
   transition:none;
@@ -343,4 +344,10 @@ address{font-style:normal;color:var(--alloy);line-height:1.7;margin-bottom:1.4re
   .rv{clip-path:none;animation:none}
   .btn,.head-call{transition:none}
   .hero-photo img{transform:none!important}
+}
+
+/* header call button: compact on phones so it never wraps */
+@media(max-width:680px){
+  .head-call{padding:.55rem .85rem;font-size:.72rem;letter-spacing:.08em}
+  .head-call-num{display:none}
 }
