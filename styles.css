@@ -351,3 +351,9 @@ address{font-style:normal;color:var(--alloy);line-height:1.7;margin-bottom:1.4re
   .head-call{padding:.55rem .85rem;font-size:.72rem;letter-spacing:.08em}
   .head-call-num{display:none}
 }
+
+/* phones: keep brand and CALL button comfortably inside the edge */
+@media(max-width:680px){
+  .site-head{gap:1rem}
+  .brand{font-size:1.15rem}
+}
